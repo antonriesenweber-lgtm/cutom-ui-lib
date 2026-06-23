@@ -1128,7 +1128,7 @@ local Templates = { -- TO-DO: do it for missing elements.
         Position = UDim2.fromOffset(175, 50),
         Size = UDim2.fromOffset(0, 0),
         AnchorPoint = Vector2.zero,
-        TabPadding = 1,
+        TabPadding = 4,
         MenuFadeTime = 0.2,
         NotifySide = "Left",
         ShowCustomCursor = true,
@@ -6593,8 +6593,8 @@ function Library:CreateWindow(...)
     })
 
     local WindowLabel = Library:CreateLabel({
-        Position = UDim2.new(0, 10, 0, 2);
-        Size = UDim2.new(0, 0, 0, 30);
+        Position = UDim2.new(0, 10, 0, 3);
+        Size = UDim2.new(0, 0, 0, 32);
         Text = WindowInfo.Title or "";
         TextXAlignment = Enum.TextXAlignment.Left;
         ZIndex = 1;
@@ -6604,8 +6604,8 @@ function Library:CreateWindow(...)
     local MainSectionOuter = Library:Create("Frame", {
         BackgroundColor3 = Library.BackgroundColor;
         BorderColor3 = Library.OutlineColor;
-        Position = UDim2.new(0, 8, 0, 32);
-        Size = UDim2.new(1, -16, 1, -40);
+        Position = UDim2.new(0, 8, 0, 36);
+        Size = UDim2.new(1, -16, 1, -44);
         ZIndex = 1;
         Parent = Inner;
     })
@@ -6636,8 +6636,8 @@ function Library:CreateWindow(...)
         AutomaticCanvasSize = Enum.AutomaticSize.XY;
         ScrollBarThickness = 0;
         BackgroundTransparency = 1;
-        Position = UDim2.new(0, 8, 0, 6);
-        Size = UDim2.new(1, -16, 0, 32);
+        Position = UDim2.new(0, 10, 0, 8);
+        Size = UDim2.new(1, -20, 0, 28);
         ZIndex = 1;
         Parent = MainSectionInner;
     })
@@ -6672,8 +6672,8 @@ function Library:CreateWindow(...)
     local TabContainer = Library:Create("Frame", {
         BackgroundColor3 = Library.MainColor;
         BorderColor3 = Library.OutlineColor;
-        Position = UDim2.new(0, 8, 0, 42);
-        Size = UDim2.new(1, -16, 1, -50);
+        Position = UDim2.new(0, 8, 0, 40);
+        Size = UDim2.new(1, -16, 1, -48);
         ZIndex = 2;
         Parent = MainSectionInner;
     })
@@ -7237,7 +7237,7 @@ function Library:CreateWindow(...)
         local TabButton = Library:Create("Frame", {
             BackgroundColor3 = Library.BackgroundColor;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 36, 1, -4);
+            Size = UDim2.new(0, TabButtonWidth + 20, 1, -4);
             ZIndex = 1;
             Parent = TabArea;
         })
